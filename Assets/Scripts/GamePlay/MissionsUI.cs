@@ -37,6 +37,7 @@ public class MissionsUI : MonoBehaviour
         if (GameData.Claimed(i) || Value(i) < Goals[i]) return;
         int before = GameData.Coins;
         GameData.Claim(i);
+        UiSounds.Play(UiSound.Success);
         GameData.Coins += Reward;
         SettingsUI.Buzz();
         Refresh(false);

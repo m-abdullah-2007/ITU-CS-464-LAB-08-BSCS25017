@@ -39,7 +39,7 @@ public class UiSounds : MonoBehaviour
 
         if (sound == UiSound.Hover)                                    // never machine-gun hovers
         {
-            if (Time.unscaledTime - lastHover < 0.05f) return;
+            if (Time.unscaledTime - lastHover < 0.08f) return;
             lastHover = Time.unscaledTime;
         }
 
