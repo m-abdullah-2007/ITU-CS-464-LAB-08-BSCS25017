@@ -4,32 +4,46 @@ using TMPro;
 
 public class SettingsUI : MonoBehaviour
 {
-    [SerializeField] Slider volumeSlider;
-    [SerializeField] TMP_Text volumeValue;
-    [SerializeField] Toggle hapticsToggle, leftHandToggle;
-    [SerializeField] TMP_Text hapticsState, leftHandState;
+    [SerializeField] Slider[] sliders;       // Master, Music, SFX, UI  (same order as MixerVolumes.Params)
+    [SerializeField] TMP_Text[] values;      // 4 percentage labels
+    [SerializeField] Toggle muteToggle, hapticsToggle, leftHandToggle;
+    [SerializeField] TMP_Text muteState, hapticsState, leftHandState;
 
     void OnEnable()
     {
-        // set values first, then listen, so loading does not trigger saves
-        volumeSlider.onValueChanged.RemoveAllListeners();
+        // set values first (without notifying), then listen, so loading does not trigger saves
+        for (int i = 0; i < sliders.Length; i++)
+        {
+            int c = i;
+            sliders[i].onValueChanged.RemoveAllListeners();
+            sliders[i].minValue = MixerVolumes.MinLinear;
+            sliders[i].maxValue = 1f;
+            sliders[i].SetValueWithoutNotify(MixerVolumes.Get(i));
+            RefreshValue(i);
+            sliders[i].onValueChanged.AddListener(v => { MixerVolumes.Set(c, v); RefreshValue(c); });
+        }
+
+        muteToggle.onValueChanged.RemoveAllListeners();
         hapticsToggle.onValueChanged.RemoveAllListeners();
         leftHandToggle.onValueChanged.RemoveAllListeners();
 
-        volumeSlider.SetValueWithoutNotify(GameData.Volume);
+        muteToggle.SetIsOnWithoutNotify(MixerVolumes.Muted);
         hapticsToggle.SetIsOnWithoutNotify(GameData.Haptics);
         leftHandToggle.SetIsOnWithoutNotify(GameData.LeftHand);
-        Refresh();
+        RefreshStates();
 
-        volumeSlider.onValueChanged.AddListener(v => { GameData.Volume = v; Refresh(); });
-        hapticsToggle.onValueChanged.AddListener(on => { GameData.Haptics = on; Refresh(); Fx.Punch(this, hapticsState.transform, 0.3f); if (on) Buzz(); });
-        leftHandToggle.onValueChanged.AddListener(on => { GameData.LeftHand = on; Refresh(); Fx.Punch(this, leftHandState.transform, 0.3f); });
+        muteToggle.onValueChanged.AddListener(on => { MixerVolumes.SetMuted(on); RefreshStates(); Fx.Punch(this, muteState.transform, 0.3f); });
+        hapticsToggle.onValueChanged.AddListener(on => { GameData.Haptics = on; RefreshStates(); Fx.Punch(this, hapticsState.transform, 0.3f); if (on) Buzz(); });
+        leftHandToggle.onValueChanged.AddListener(on => { GameData.LeftHand = on; RefreshStates(); Fx.Punch(this, leftHandState.transform, 0.3f); });
     }
 
-    void Refresh()
+    void OnDisable() => PlayerPrefs.Save();
+
+    void RefreshValue(int i) => values[i].SetText("{0}%", Mathf.RoundToInt(sliders[i].value * 100f));
+
+    void RefreshStates()
     {
-        AudioListener.volume = GameData.Volume;
-        volumeValue.SetText("{0}%", Mathf.RoundToInt(GameData.Volume * 100f));
+        SetState(muteState, MixerVolumes.Muted);
         SetState(hapticsState, GameData.Haptics);
         SetState(leftHandState, GameData.LeftHand);
     }
