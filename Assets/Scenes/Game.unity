@@ -24713,6 +24713,7 @@ MonoBehaviour:
   muteState: {fileID: 667470289}
   hapticsState: {fileID: 343174933}
   leftHandState: {fileID: 916538439}
+  mixer: {fileID: 24100000, guid: 0d17f474b5015304fbaa802be4f66013, type: 2}
 --- !u!114 &1961403624
 MonoBehaviour:
   m_ObjectHideFlags: 0

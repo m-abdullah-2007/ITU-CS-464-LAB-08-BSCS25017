@@ -35,11 +35,18 @@ public static class MixerVolumes
     public static float ToDecibels(float linear) =>
         Mathf.Log10(Mathf.Clamp(linear, MinLinear, 1f)) * 20f;
 
+    public static bool Ready => mixer != null;
+
     static void Apply(int i)
     {
-        if (mixer == null) return;
+        if (mixer == null)
+        {
+            Debug.LogError("MixerVolumes: no mixer. Is AudioBootstrap in the scene with its Mixer slot filled?");
+            return;
+        }
         float db = (i == 0 && Muted) ? -80f : ToDecibels(Get(i));
         if (!mixer.SetFloat(Params[i], db))
             Debug.LogWarning("Mixer has no exposed parameter named " + Params[i]);
+        Debug.Log(Params[i] + " -> " + db.ToString("F1") + " dB");   // delete once it works
     }
 }

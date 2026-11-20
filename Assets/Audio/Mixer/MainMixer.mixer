@@ -120,13 +120,13 @@ AudioMixerController:
   m_UpdateMode: 1
   m_ExposedParameters:
   - guid: d0db4ad71af5ad5458f4634938732097
-    name: MasterVlolume
-  - guid: 9352d077fbad4d74ea6d02ad8567fb2d
     name: UiVolume
+  - guid: 9352d077fbad4d74ea6d02ad8567fb2d
+    name: MasterVolume
   - guid: 59c78383d1517a34e80f0342b0372c9e
-    name: SfxVloume
-  - guid: 3179f6590ba50044b8627a1d0defae87
     name: MusicVolume
+  - guid: 3179f6590ba50044b8627a1d0defae87
+    name: SfxVolume
   m_AudioMixerGroupViews:
   - guids:
     - 4552305673438ab41833eb7d701e03ea
@@ -135,7 +135,7 @@ AudioMixerController:
     - dc1590c5fe0abd548be78ee01884a9e6
     name: View
   m_CurrentViewIndex: 0
-  m_TargetSnapshot: {fileID: 3074371897830706402}
+  m_TargetSnapshot: {fileID: 24500006}
 --- !u!243 &24300002
 AudioMixerGroupController:
   m_ObjectHideFlags: 0

@@ -1,6 +1,7 @@
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using UnityEngine.Audio;
 
 public class SettingsUI : MonoBehaviour
 {
@@ -8,9 +9,11 @@ public class SettingsUI : MonoBehaviour
     [SerializeField] TMP_Text[] values;      // 4 percentage labels
     [SerializeField] Toggle muteToggle, hapticsToggle, leftHandToggle;
     [SerializeField] TMP_Text muteState, hapticsState, leftHandState;
+    [SerializeField] AudioMixer mixer;
 
     void OnEnable()
     {
+        if (!MixerVolumes.Ready) MixerVolumes.Init(mixer);
         // set values first (without notifying), then listen, so loading does not trigger saves
         for (int i = 0; i < sliders.Length; i++)
         {
