@@ -34,6 +34,7 @@ public class ShopUI : MonoBehaviour
         int before = GameData.Coins;
         GameData.Coins -= JetpackInfo.Prices[i];
         GameData.Own(i);
+        UiSounds.Play(UiSound.Success);
         GameData.Equipped = i;
         message.SetText(JetpackInfo.Names[i] + " UNLOCKED AND EQUIPPED");
         SettingsUI.Buzz();

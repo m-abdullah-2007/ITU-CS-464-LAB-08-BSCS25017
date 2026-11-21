@@ -32,7 +32,7 @@ public class LoadoutUI : MonoBehaviour
     public void StartRun()
     {
         GameData.Equipped = index;
-        GameSession.Instance.StartRun();
+        SceneLoader.Instance.BeginRun();     // was: GameSession.Instance.StartRun();
     }
 
     void Show()
