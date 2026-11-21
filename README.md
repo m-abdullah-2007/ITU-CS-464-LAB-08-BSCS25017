@@ -2,6 +2,7 @@
 
 **JET LAB** (mobile game menu system) · CS 464 Lab 08, built on top of my completed Lab 07 project.
 **Unity version:** Unity 6.3 LTS - 6000.3.24f1 | Render pipeline: URP
+**Demo video:** https://drive.google.com/file/d/1LYVsb-4KCKRpfNF6DOr3ASuGGGVHdGNz/view?usp=drive_link
 
 > Jetpack Joyride is inspiration only. No copied assets, no AI images. All motion and audio logic is my own code; audio files are third-party and credited in section 7.
 
