@@ -160,23 +160,23 @@ The following table documents the audio assets used in this project. Every file 
 
 | # | Audio File | Category | Usage | Author / Source | Source URL | Licence | Edited |
 |---:|---|---|---|---|---|---|---|
-| 1 | Hover.ogg | UI | Hover | leohpaz - "10 Retro RPG Menu Sounds" (OpenGameArt) | [Link](https://opengameart.org/content/10-retro-rpg-menu-sounds) | CC-BY 4.0 | No |
+| 1 | Hover.wav | UI | Hover | leohpaz - "10 Retro RPG Menu Sounds" (OpenGameArt) | [Link](https://opengameart.org/content/10-retro-rpg-menu-sounds) | CC-BY 4.0 | No |
 | 2 | Click.ogg | UI | Click | Kenney.nl | [Link](https://kenney.nl/assets) | CC0 | No |
 | 3 | Back.ogg | UI | Back | Kenney.nl | [Link](https://kenney.nl/assets) | CC0 | No |
 | 4 | Open.ogg | UI | Open | Kenney.nl | [Link](https://kenney.nl/assets) | CC0 | No |
 | 5 | Close.ogg | UI | Close | Kenney.nl | [Link](https://kenney.nl/assets) | CC0 | No |
-| 6 | Pause.ogg | UI | Pause | leohpaz - "10 Retro RPG Menu Sounds" (OpenGameArt) | [Link](https://opengameart.org/content/10-retro-rpg-menu-sounds) | CC-BY 4.0 | No |
-| 7 | Resume.ogg | UI | Resume | "Cozy Farm SFX" by Bramble & Byte | [Link](https://aquumgifts.itch.io) | CC-BY | No |
-| 8 | Success.ogg | UI | Success | Kenney.nl | [Link](https://kenney.nl/assets) | CC0 | No |
+| 6 | Pause.wav | UI | Pause | leohpaz - "10 Retro RPG Menu Sounds" (OpenGameArt) | [Link](https://opengameart.org/content/10-retro-rpg-menu-sounds) | CC-BY 4.0 | No |
+| 7 | Resume.wav | UI | Resume | "Cozy Farm SFX" by Bramble & Byte | [Link](https://aquumgifts.itch.io) | CC-BY | No |
+| 8 | Success.wav | UI | Success | Kenney.nl | [Link](https://kenney.nl/assets) | CC0 | No |
 | 9 | Error.ogg | UI | Error | Kenney.nl | [Link](https://kenney.nl/assets) | CC0 | No |
-| 10 | CoinPickup.ogg | SFX | Coin Pickup | NenadSimic - "Picked Coin Echo 2" (OpenGameArt) | [Link](https://opengameart.org/content/picked-coin-echo-2) | CC-BY 3.0 | No |
-| 11 | Death.ogg | SFX | Death | Badre-Eddine - "Hurt / Death sound effect for character" (OpenGameArt) | [Link](https://opengameart.org/content/hurt-death-sound-effect-for-character) | CC0 | No |
+| 10 | CoinPickup.wav | SFX | Coin Pickup | NenadSimic - "Picked Coin Echo 2" (OpenGameArt) | [Link](https://opengameart.org/content/picked-coin-echo-2) | CC-BY 3.0 | No |
+| 11 | Death.mp3 | SFX | Death | Badre-Eddine - "Hurt / Death sound effect for character" (OpenGameArt) | [Link](https://opengameart.org/content/hurt-death-sound-effect-for-character) | CC0 | No |
 | 12 | Hurt.ogg | SFX | Hurt | Exewin - "Death sounds" (OpenGameArt) | [Link](https://opengameart.org/content/death-sounds-0) | CC0 | No |
-| 13 | Boost.ogg | SFX | Boost | qubodup - "Up (3x)" (OpenGameArt) | [Link](https://opengameart.org/content/up-3x) | CC0 | No |
-| 14 | StartRun.ogg | SFX | Run Start | OpenGameArt (TODO: author from page) | [Link](https://opengameart.org/content/gui-sound-effects-8) | CC0 | No |
-| 15 | MenuLoop.ogg | Music | Menu Loop | Akikazer - "Menu Loop" (OpenGameArt) | [Link](https://opengameart.org/content/menu-loop) | CC0 | No |
+| 13 | Boost.wav | SFX | Boost | qubodup - "Up (3x)" (OpenGameArt) | [Link](https://opengameart.org/content/up-3x) | CC0 | No |
+| 14 | StartRun.wav | SFX | Run Start | OpenGameArt (TODO: author from page) | [Link](https://opengameart.org/content/gui-sound-effects-8) | CC0 | No |
+| 15 | MenuLoop.wav | Music | Menu Loop | Akikazer - "Menu Loop" (OpenGameArt) | [Link](https://opengameart.org/content/menu-loop) | CC0 | No |
 | 16 | GamePlayLoop.ogg | Music | Gameplay Loop | Trinnox - "Arcade fast flow Sound" (OpenGameArt) | [Link](https://opengameart.org/content/arcade-fast-flow-sound) | CC-BY 3.0 | No |
-| 17 | ResultsLoop.ogg | Music | Results Loop | Umplix - "Results (Short Loop)" (OpenGameArt) | [Link](https://opengameart.org/content/results-short-loop) | CC0 | No |
+| 17 | ResultsLoop.wav | Music | Results Loop | Umplix - "Results (Short Loop)" (OpenGameArt) | [Link](https://opengameart.org/content/results-short-loop) | CC0 | No |
 
 ### Attribution required (CC-BY)
 
